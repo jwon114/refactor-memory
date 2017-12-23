@@ -235,26 +235,27 @@ while (shuffle20 === shuffle1 || shuffle20 === shuffle2 || shuffle20 === shuffle
 var cardShuffle20 = shuffleArray[shuffle20];
 
 //Variables to activate card onclick functions.
-var click1 = 1;
-var click2 = 1;
-var click3 = 1;
-var click4 = 1;
-var click5 = 1;
-var click6 = 1;
-var click7 = 1;
-var click8 = 1;
-var click9 = 1;
-var click10 = 1;
-var click11 = 1;
-var click12 = 1;
-var click13 = 1;
-var click14 = 1;
-var click15 = 1;
-var click16 = 1;
-var click17 = 1;
-var click18 = 1;
-var click19 = 1;
-var click20 = 1;
+var clickArray = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+// var click1 = 1;
+// var click2 = 1;
+// var click3 = 1;
+// var click4 = 1;
+// var click5 = 1;
+// var click6 = 1;
+// var click7 = 1;
+// var click8 = 1;
+// var click9 = 1;
+// var click10 = 1;
+// var click11 = 1;
+// var click12 = 1;
+// var click13 = 1;
+// var click14 = 1;
+// var click15 = 1;
+// var click16 = 1;
+// var click17 = 1;
+// var click18 = 1;
+// var click19 = 1;
+// var click20 = 1;
 
 //Variables to handle card swapping and comparing.
 var puzzle = "plain_card.png";
@@ -282,171 +283,171 @@ function resetThird(){
 	firstCardPosition.src = firstCard;
 }
 
-function noMatch(){//Resetting click values from previous incorrect guess.
-	if (click1 === 2){
-		click1 = 1;
+function noMatch(click){//Resetting click values from previous incorrect guess.
+	if (click === 2){
+		click = 1;
 		console.log("Card 1 now equals " + click1);
 	}
-	if (click2 === 2){
-		click2 = 1;
-		console.log("Card 2 now equals " + click2);
-	}
-	if (click3 === 2){
-		click3 = 1;
-		console.log("Card 3 now equals " + click3);
-	}
-	if (click4 === 2){
-		click4 = 1;
-		console.log("Card 4 now equals " + click4);
-	}
-	if (click5 === 2){
-		click5 = 1;
-		console.log("Card 5 now equals " + click5);
-	}
-	if (click6 === 2){
-		click6 = 1;
-		console.log("Card 6 now equals " + click6);
-	}
-	if (click7 === 2){
-		click7 = 1;
-		console.log("Card 7 now equals " + click7);
-	}
-	if (click8 === 2){
-		click8 = 1;
-		console.log("Card 8 now equals " + click8);
-	}
-	if (click9 === 2){
-		click9 = 1;
-		console.log("Card 9 now equals " + click9);
-	}
-	if (click10 === 2){
-		click10 = 1;
-		console.log("Card 10 now equals " + click10);
-	}
-	if (click11 === 2){
-		click11 = 1;
-		console.log("Card 11 now equals " + click11);
-	}
-	if (click12 === 2){
-		click12 = 1;
-		console.log("Card 12 now equals " + click12);
-	}
-	if (click13 === 2){
-		click13 = 1;
-		console.log("Card 13 now equals " + click13);
-	}
-	if (click14 === 2){
-		click14 = 1;
-		console.log("Card 14 now equals " + click14);
-	}
-	if (click15 === 2){
-		click15 = 1;
-		console.log("Card 15 now equals " + click15);
-	}
-	if (click16 === 2){
-		click16 = 1;
-		console.log("Card 16 now equals " + click16);
-	}
-	if (click17 === 2){
-		click17 = 1;
-		console.log("Card 17 now equals " + click17);
-	}
-	if (click18 === 2){
-		click18 = 1;
-		console.log("Card 18 now equals " + click18);
-	}
-	if (click19 === 2){
-		click19 = 1;
-		console.log("Card 19 now equals " + click19);
-	}
-	if (click20 === 2){
-		click20 = 1;
-		console.log("Card 20 now equals " + click20);
-	}
+	// if (click2 === 2){
+	// 	click2 = 1;
+	// 	console.log("Card 2 now equals " + click2);
+	// }
+	// if (click3 === 2){
+	// 	click3 = 1;
+	// 	console.log("Card 3 now equals " + click3);
+	// }
+	// if (click4 === 2){
+	// 	click4 = 1;
+	// 	console.log("Card 4 now equals " + click4);
+	// }
+	// if (click5 === 2){
+	// 	click5 = 1;
+	// 	console.log("Card 5 now equals " + click5);
+	// }
+	// if (click6 === 2){
+	// 	click6 = 1;
+	// 	console.log("Card 6 now equals " + click6);
+	// }
+	// if (click7 === 2){
+	// 	click7 = 1;
+	// 	console.log("Card 7 now equals " + click7);
+	// }
+	// if (click8 === 2){
+	// 	click8 = 1;
+	// 	console.log("Card 8 now equals " + click8);
+	// }
+	// if (click9 === 2){
+	// 	click9 = 1;
+	// 	console.log("Card 9 now equals " + click9);
+	// }
+	// if (click10 === 2){
+	// 	click10 = 1;
+	// 	console.log("Card 10 now equals " + click10);
+	// }
+	// if (click11 === 2){
+	// 	click11 = 1;
+	// 	console.log("Card 11 now equals " + click11);
+	// }
+	// if (click12 === 2){
+	// 	click12 = 1;
+	// 	console.log("Card 12 now equals " + click12);
+	// }
+	// if (click13 === 2){
+	// 	click13 = 1;
+	// 	console.log("Card 13 now equals " + click13);
+	// }
+	// if (click14 === 2){
+	// 	click14 = 1;
+	// 	console.log("Card 14 now equals " + click14);
+	// }
+	// if (click15 === 2){
+	// 	click15 = 1;
+	// 	console.log("Card 15 now equals " + click15);
+	// }
+	// if (click16 === 2){
+	// 	click16 = 1;
+	// 	console.log("Card 16 now equals " + click16);
+	// }
+	// if (click17 === 2){
+	// 	click17 = 1;
+	// 	console.log("Card 17 now equals " + click17);
+	// }
+	// if (click18 === 2){
+	// 	click18 = 1;
+	// 	console.log("Card 18 now equals " + click18);
+	// }
+	// if (click19 === 2){
+	// 	click19 = 1;
+	// 	console.log("Card 19 now equals " + click19);
+	// }
+	// if (click20 === 2){
+	// 	click20 = 1;
+	// 	console.log("Card 20 now equals " + click20);
+	// }
 }
 
-function theyMatch(){
+function theyMatch(click){
 	console.log("theyMatch runs");
-	if (click1 === 2){
-		click1 = 3;
+	if (click === 2){
+		click = 3;
 		console.log("Card 1 now equals " + click1);
 	}
-	if (click2 === 2){
-		click2 = 3;
-		console.log("Card 2 now equals " + click2);
-	}
-	if (click3 === 2){
-		click3 = 3;
-		console.log("Card 3 now equals " + click3);
-	}
-	if (click4 === 2){
-		click4 = 3;
-		console.log("Card 4 now equals " + click4);
-	}
-	if (click5 === 2){
-		click5 = 3;
-		console.log("Card 5 now equals " + click5);
-	}
-	if (click6 === 2){
-		click6 = 3;
-		console.log("Card 6 now equals " + click6);
-	}
-	if (click7 === 2){
-		click7 = 3;
-		console.log("Card 7 now equals " + click7);
-	}
-	if (click8 === 2){
-		click8 = 3;
-		console.log("Card 8 now equals " + click8);
-	}
-	if (click9 === 2){
-		click9 = 3;
-		console.log("Card 9 now equals " + click9);
-	}
-	if (click10 === 2){
-		click10 = 3;
-		console.log("Card 10 now equals " + click10);
-	}
-	if (click11 === 2){
-		click11 = 3;
-		console.log("Card 11 now equals " + click11);
-	}
-	if (click12 === 2){
-		click12 = 3;
-		console.log("Card 12 now equals " + click12);
-	}
-	if (click13 === 2){
-		click13 = 3;
-		console.log("Card 13 now equals " + click13);
-	}
-	if (click14 === 2){
-		click14 = 3;
-		console.log("Card 14 now equals " + click14);
-	}
-	if (click15 === 2){
-		click15 = 3;
-		console.log("Card 15 now equals " + click15);
-	}
-	if (click16 === 2){
-		click16 = 3;
-		console.log("Card 16 now equals " + click16);
-	}
-	if (click17 === 2){
-		click17 = 3;
-		console.log("Card 17 now equals " + click17);
-	}
-	if (click18 === 2){
-		click18 = 3;
-		console.log("Card 18 now equals " + click18);
-	}
-	if (click19 === 2){
-		click19 = 3;
-		console.log("Card 19 now equals " + click19);
-	}
-	if (click20 === 2){
-		click20 = 3;
-		console.log("Card 20 now equals " + click20);
-	}
+	// if (click2 === 2){
+	// 	click2 = 3;
+	// 	console.log("Card 2 now equals " + click2);
+	// }
+	// if (click3 === 2){
+	// 	click3 = 3;
+	// 	console.log("Card 3 now equals " + click3);
+	// }
+	// if (click4 === 2){
+	// 	click4 = 3;
+	// 	console.log("Card 4 now equals " + click4);
+	// }
+	// if (click5 === 2){
+	// 	click5 = 3;
+	// 	console.log("Card 5 now equals " + click5);
+	// }
+	// if (click6 === 2){
+	// 	click6 = 3;
+	// 	console.log("Card 6 now equals " + click6);
+	// }
+	// if (click7 === 2){
+	// 	click7 = 3;
+	// 	console.log("Card 7 now equals " + click7);
+	// }
+	// if (click8 === 2){
+	// 	click8 = 3;
+	// 	console.log("Card 8 now equals " + click8);
+	// }
+	// if (click9 === 2){
+	// 	click9 = 3;
+	// 	console.log("Card 9 now equals " + click9);
+	// }
+	// if (click10 === 2){
+	// 	click10 = 3;
+	// 	console.log("Card 10 now equals " + click10);
+	// }
+	// if (click11 === 2){
+	// 	click11 = 3;
+	// 	console.log("Card 11 now equals " + click11);
+	// }
+	// if (click12 === 2){
+	// 	click12 = 3;
+	// 	console.log("Card 12 now equals " + click12);
+	// }
+	// if (click13 === 2){
+	// 	click13 = 3;
+	// 	console.log("Card 13 now equals " + click13);
+	// }
+	// if (click14 === 2){
+	// 	click14 = 3;
+	// 	console.log("Card 14 now equals " + click14);
+	// }
+	// if (click15 === 2){
+	// 	click15 = 3;
+	// 	console.log("Card 15 now equals " + click15);
+	// }
+	// if (click16 === 2){
+	// 	click16 = 3;
+	// 	console.log("Card 16 now equals " + click16);
+	// }
+	// if (click17 === 2){
+	// 	click17 = 3;
+	// 	console.log("Card 17 now equals " + click17);
+	// }
+	// if (click18 === 2){
+	// 	click18 = 3;
+	// 	console.log("Card 18 now equals " + click18);
+	// }
+	// if (click19 === 2){
+	// 	click19 = 3;
+	// 	console.log("Card 19 now equals " + click19);
+	// }
+	// if (click20 === 2){
+	// 	click20 = 3;
+	// 	console.log("Card 20 now equals " + click20);
+	// }
 	//Replace puzzle card with solved image.
 	firstCardPosition.src = solved;
 	secondCardPosition.src = solved;
@@ -457,91 +458,97 @@ function theyMatch(){
 
 function winningMemory(){
 	console.log("Winning function runs.");
-	if (click1 === 3 && click2 === 3 && click3 === 3 && click4 === 3 && click5 === 3 && click6 === 3 && click7 === 3 && click8 === 3 && click9 === 3 && click10 === 3 && click11 === 3 && click12 === 3 && click13 === 3 && click14 === 3 && click15 === 3 && click16 === 3 && click17 === 3 && click18 === 3 && click19 === 3 && click20 === 3){
-		alert("You win!");
-	}
+	// if (clickArray[0] === 3 && click2 === 3 && click3 === 3 && click4 === 3 && click5 === 3 && click6 === 3 && click7 === 3 && click8 === 3 && click9 === 3 && click10 === 3 && click11 === 3 && click12 === 3 && click13 === 3 && click14 === 3 && click15 === 3 && click16 === 3 && click17 === 3 && click18 === 3 && click19 === 3 && click20 === 3){
+	// 	alert("You win!");
+	// }
+	var win = true
+	clickArray.forEach(function(click) {
+		if (click !== '3') { win = false }
+	})
+
+	if (win) { alert('You win!'); }
 }
 
 function checkMatch(){
 	console.log("checkMatch runs");
 	if(firstCard === cardSelected1a || firstCard === cardSelected1b){
 		if(secondCard === cardSelected1a || secondCard === cardSelected1b){
-			theyMatch();
+			theyMatch(clickArray[0]);
 		}
 		else {
-			noMatch();
+			noMatch(clickArray[0]);
 		}
 	}
 	if(firstCard === cardSelected2a || firstCard === cardSelected2b){
 		if(secondCard === cardSelected2a || secondCard === cardSelected2b){
-			theyMatch();
+			theyMatch(clickArray[1]);
 		}
 		else {
-			noMatch();
+			noMatch(clickArray[1]);
 		}
 	}
 	if(firstCard === cardSelected3a || firstCard === cardSelected3b){
 		if(secondCard === cardSelected3a || secondCard === cardSelected3b){
-			theyMatch();
+			theyMatch(clickArray[2]);
 		}
 		else {
-			noMatch();
+			noMatch(clickArray[2]);
 		}
 	}
 	if(firstCard === cardSelected4a || firstCard === cardSelected4b){
 		if(secondCard === cardSelected4a || secondCard === cardSelected4b){
-			theyMatch();
+			theyMatch(clickArray[3]);
 		}
 		else {
-			noMatch();
+			noMatch(clickArray[3]);
 		}
 	}
 	if(firstCard === cardSelected5a || firstCard === cardSelected5b){
 		if(secondCard === cardSelected5a || secondCard === cardSelected5b){
-			theyMatch();
+			theyMatch(clickArray[4]);
 		}
 		else {
-			noMatch();
+			noMatch(clickArray[4]);
 		}
 	}
 	if(firstCard === cardSelected6a || firstCard === cardSelected6b){
 		if(secondCard === cardSelected6a || secondCard === cardSelected6b){
-			theyMatch();
+			theyMatch(clickArray[5]);
 		}
 		else {
-			noMatch();
+			noMatch(clickArray[5]);
 		}
 	}
 	if(firstCard === cardSelected7a || firstCard === cardSelected7b){
 		if(secondCard === cardSelected7a || secondCard === cardSelected7b){
-			theyMatch();
+			theyMatch(clickArray[6]);
 		}
 		else {
-			noMatch();
+			noMatch(clickArray[6]);
 		}
 	}
 	if(firstCard === cardSelected8a || firstCard === cardSelected8b){
 		if(secondCard === cardSelected8a || secondCard === cardSelected8b){
-			theyMatch();
+			theyMatch(clickArray[7]);
 		}
 		else {
-			noMatch();
+			noMatch(clickArray[7]);
 		}
 	}
 	if(firstCard === cardSelected9a || firstCard === cardSelected9b){
 		if(secondCard === cardSelected9a || secondCard === cardSelected9b){
-			theyMatch();
+			theyMatch(clickArray[8]);
 		}
 		else {
-			noMatch();
+			noMatch(clickArray[8]);
 		}
 	}
 	if(firstCard === cardSelected10a || firstCard === cardSelected10b){
 		if(secondCard === cardSelected10a || secondCard === cardSelected10b){
-			theyMatch();
+			theyMatch(clickArray[9]);
 		}
 		else {
-			noMatch();
+			noMatch(clickArray[9]);
 		}
 	}
 }
@@ -565,47 +572,14 @@ function checkPair (){ //Function to check if the cards are pairs or not.
 	}
 }
 
-//Onclick functions from HTML file.
-function clickCard1() {
-	console.log("Card 1 clicked");
-	//Variable to link to the correct HTML elements.
-	var position1 = document.getElementById("card1");
-	//If the card has not been selected then it will be set to 1. If the card has been clicked on then it will be set to 2. If the card has been solved then it will be set to 3. The if statement prevents players from removing cards from the board by double clicking on them.
-	if (click1 === 1){
-		console.log("Card 1 equals 1");
-		//Displays the image for this card.
-		position1.src = cardShuffle1;
-		//Updates the card value to show that the image is visible.
-		click1 = 2;
-		//Else if statement to update the matching variables.
-		if (firstCard === "unclicked"){
-			firstCard = cardShuffle1;
-			firstCardPosition = position1;
-			console.log("first card updated");}
-		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle1;
-			secondCardPosition = position1;
-			console.log("second card updated");
-			}
-		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle1;
-			thirdCardPosition = position1;
-			console.log("third card updated");
-		}
-		//Run the matching functions.
-		checkPair();}
-	//Else statement for debugging purposes.
-	else {
-	console.log("else statement active.");}
-  }
-
-function clickCard2() {
-	console.log("Card 2 clicked");
-	var position2 = document.getElementById("card2");
-	if (click2 === 1){
-		console.log("Card 2 equals 1");
+function clickCard(click, event) {
+	// console.log("Card 2 clicked");
+	var position2 = event.target;
+	console.log(position2);
+	if (click === 1) {
+		// console.log("Card 2 equals 1");
 		position2.src = cardShuffle2;
-		click2 = 2;
+		click = 2;
 		if (firstCard === "unclicked"){
 			firstCard = cardShuffle2;
 			firstCardPosition = position2;}
@@ -617,388 +591,486 @@ function clickCard2() {
 			thirdCard = cardShuffle2;
 			thirdCardPosition = position2;
 		}
-		checkPair();}
-}
-
-function clickCard3() {
-	console.log("Card 3 clicked");
-	var position3 = document.getElementById("card3");
-	if (click3 === 1){
-		console.log("Card 3 equals 1");
-		position3.src = cardShuffle3;
-		click3 = 2;
-		if (firstCard === "unclicked"){
-			firstCard = cardShuffle3;
-			firstCardPosition = position3;}
-		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle3;
-			secondCardPosition = position3;
-			}
-		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle3;
-			thirdCardPosition = position3;
-		}
-		checkPair();}
-}
-
-function clickCard4() {
-	console.log("Card 4 clicked");
-	var position4 = document.getElementById("card4");
-	if (click4 === 1){
-		console.log("Card 4 equals 1");
-		position4.src = cardShuffle4;
-		click4 = 2;
-		if (firstCard === "unclicked"){
-			firstCard = cardShuffle4;
-			firstCardPosition = position4;}
-		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle4;
-			secondCardPosition = position4;
-			}
-		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle4;
-			thirdCardPosition = position4;
-		}
-		checkPair();}
-}
-
-function clickCard5() {
-	console.log("Card 5 clicked");
-	var position5 = document.getElementById("card5");
-	if (click5 === 1){
-		console.log("Card 5 equals 1");
-		position5.src = cardShuffle5;
-		click5 = 2;
-		if (firstCard === "unclicked"){
-			firstCard = cardShuffle5;
-			firstCardPosition = position5;
-			console.log(firstCardPosition);}
-		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle5;
-			secondCardPosition = position5;
-			}
-		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle5;
-			thirdCardPosition = position5;
-		}
-		checkPair();}
-}
-
-function clickCard6() {
-	console.log("Card 6 clicked");
-	var position6 = document.getElementById("card6");
-	if (click6 === 1){
-		console.log("Card 6 equals 1");
-		position6.src = cardShuffle6;
-		click6 = 2;
-		if (firstCard === "unclicked"){
-			firstCard = cardShuffle6;
-			firstCardPosition = position6;
-			console.log(firstCardPosition);}
-		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle6;
-			secondCardPosition = position6;
-			}
-		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle6;
-			thirdCardPosition = position6;
-		}
-		checkPair();}
-}
-
-function clickCard7() {
-	console.log("Card 7 clicked");
-	var position7 = document.getElementById("card7");
-	if (click7 === 1){
-		console.log("Card 7 equals 1");
-		position7.src = cardShuffle7;
-		click7 = 2;
-		if (firstCard === "unclicked"){
-			firstCard = cardShuffle7;
-			firstCardPosition = position7;
-			console.log(firstCardPosition);}
-		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle7;
-			secondCardPosition = position7;
-			}
-		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle7;
-			thirdCardPosition = position7;
-		}
-		checkPair();}
-}
-
-function clickCard8() {
-	console.log("Card 8 clicked");
-	var position8 = document.getElementById("card8");
-	if (click8 === 1){
-		console.log("Card 8 equals 1");
-		position8.src = cardShuffle8;
-		click8 = 2;
-		if (firstCard === "unclicked"){
-			firstCard = cardShuffle8;
-			firstCardPosition = position8;
-			console.log(firstCardPosition);}
-		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle8;
-			secondCardPosition = position8;
-			}
-		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle8;
-			thirdCardPosition = position8;
-		}
-		checkPair();}
-}
-
-function clickCard9() {
-	console.log("Card 9 clicked");
-	var position9 = document.getElementById("card9");
-	if (click9 === 1){
-		console.log("Card 9 equals 1");
-		position9.src = cardShuffle9;
-		click9 = 2;
-		if (firstCard === "unclicked"){
-			firstCard = cardShuffle9;
-			firstCardPosition = position9;
-			console.log(firstCardPosition);}
-		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle9;
-			secondCardPosition = position9;
-			}
-		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle9;
-			thirdCardPosition = position9;
-		}
-		checkPair();}
-}
-
-function clickCard10() {
-	console.log("Card 10 clicked");
-	var position10 = document.getElementById("card10");
-	if (click10 === 1){
-		console.log("Card 10 equals 1");
-		position10.src = cardShuffle10;
-		click10 = 2;
-		if (firstCard === "unclicked"){
-			firstCard = cardShuffle10;
-			firstCardPosition = position10;}
-		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle10;
-			secondCardPosition = position10;
-			}
-		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle10;
-			thirdCardPosition = position10;
-		}
-		checkPair();}
-}
-
-function clickCard11() {
-	var position11 = document.getElementById("card11");
-	if (click11 === 1){
-		position11.src = cardShuffle11;
-		click11 = 2;
-		if (firstCard === "unclicked"){
-			firstCard = cardShuffle11;
-			firstCardPosition = position11;
-		}
-		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle11;
-			secondCardPosition = position11;
-		}
-		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle11;
-			thirdCardPosition = position11;
-		}
 		checkPair();
 	}
 }
 
-function clickCard12() {
-	var position12 = document.getElementById("card12");
-	if (click12 === 1){
-		position12.src = cardShuffle12;
-		click12 = 2;
-		if (firstCard === "unclicked"){
-			firstCard = cardShuffle12;
-			firstCardPosition = position12;
-		}
-		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle12;
-			secondCardPosition = position12;
-		}
-		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle12;
-			thirdCardPosition = position12;
-		}
-		checkPair();
-	}
-}
+var clickCard1Select = document.querySelector('#card1');
+var clickCard2Select = document.querySelector('#card2');
+var clickCard3Select = document.querySelector('#card3');
+var clickCard4Select = document.querySelector('#card4');
+var clickCard5Select = document.querySelector('#card5');
+var clickCard6Select = document.querySelector('#card6');
+var clickCard7Select = document.querySelector('#card7');
+var clickCard8Select = document.querySelector('#card8');
+var clickCard9Select = document.querySelector('#card9');
+var clickCard10Select = document.querySelector('#card10');
+var clickCard11Select = document.querySelector('#card11');
+var clickCard12Select = document.querySelector('#card12');
+var clickCard13Select = document.querySelector('#card13');
+var clickCard14Select = document.querySelector('#card14');
+var clickCard15Select = document.querySelector('#card15');
+var clickCard16Select = document.querySelector('#card16');
+var clickCard17Select = document.querySelector('#card17');
+var clickCard18Select = document.querySelector('#card18');
+var clickCard19Select = document.querySelector('#card19');
+var clickCard20Select = document.querySelector('#card20');
 
-function clickCard13() {
-	var position13 = document.getElementById("card13");
-	if (click13 === 1){
-		position13.src = cardShuffle13;
-		click13 = 2;
-		if (firstCard === "unclicked"){
-			firstCard = cardShuffle13;
-			firstCardPosition = position13;
-		}
-		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle13;
-			secondCardPosition = position13;
-		}
-		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle13;
-			thirdCardPosition = position13;
-		}
-		checkPair();
-	}
-}
+clickCard1Select.addEventListener('click', (event) => clickCard(clickArray[0], event)) 
+clickCard2Select.addEventListener('click', (event) => clickCard(clickArray[1], event)) 
+clickCard3Select.addEventListener('click', (event) => clickCard(clickArray[2], event)) 
+clickCard4Select.addEventListener('click', (event) => clickCard(clickArray[3], event)) 
+clickCard5Select.addEventListener('click', (event) => clickCard(clickArray[4], event)) 
+clickCard6Select.addEventListener('click', (event) => clickCard(clickArray[5], event)) 
+clickCard7Select.addEventListener('click', (event) => clickCard(clickArray[6], event)) 
+clickCard8Select.addEventListener('click', (event) => clickCard(clickArray[7], event)) 
+clickCard9Select.addEventListener('click', (event) => clickCard(clickArray[8], event)) 
+clickCard10Select.addEventListener('click', (event) => clickCard(clickArray[9], event))
+clickCard11Select.addEventListener('click', (event) => clickCard(clickArray[10], event))
+clickCard12Select.addEventListener('click', (event) => clickCard(clickArray[11], event))
+clickCard13Select.addEventListener('click', (event) => clickCard(clickArray[12], event))
+clickCard14Select.addEventListener('click', (event) => clickCard(clickArray[13], event))
+clickCard15Select.addEventListener('click', (event) => clickCard(clickArray[14], event))
+clickCard16Select.addEventListener('click', (event) => clickCard(clickArray[15], event))
+clickCard17Select.addEventListener('click', (event) => clickCard(clickArray[16], event))
+clickCard18Select.addEventListener('click', (event) => clickCard(clickArray[17], event))
+clickCard19Select.addEventListener('click', (event) => clickCard(clickArray[18], event))
+clickCard20Select.addEventListener('click', (event) => clickCard(clickArray[19], event))
 
-function clickCard14() {
-	var position14 = document.getElementById("card14");
-	if (click14 === 1){
-		position14.src = cardShuffle14;
-		click14 = 2;
-		if (firstCard === "unclicked"){
-			firstCard = cardShuffle14;
-			firstCardPosition = position14;
-		}
-		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle14;
-			secondCardPosition = position14;
-		}
-		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle14;
-			thirdCardPosition = position14;
-		}
-		checkPair();
-	}
-}
+//Onclick functions from HTML file.
+// function clickCard1() {
+// 	console.log("Card 1 clicked");
+// 	//Variable to link to the correct HTML elements.
+// 	var position1 = document.getElementById("card1");
+// 	//If the card has not been selected then it will be set to 1. If the card has been clicked on then it will be set to 2. If the card has been solved then it will be set to 3. The if statement prevents players from removing cards from the board by double clicking on them.
+// 	if (click1 === 1){
+// 		console.log("Card 1 equals 1");
+// 		//Displays the image for this card.
+// 		position1.src = cardShuffle1;
+// 		//Updates the card value to show that the image is visible.
+// 		click1 = 2;
+// 		//Else if statement to update the matching variables.
+// 		if (firstCard === "unclicked"){
+// 			firstCard = cardShuffle1;
+// 			firstCardPosition = position1;
+// 			console.log("first card updated");}
+// 		else if (secondCard === "unclicked"){
+// 			secondCard = cardShuffle1;
+// 			secondCardPosition = position1;
+// 			console.log("second card updated");
+// 			}
+// 		else if (thirdCard === "unclicked"){
+// 			thirdCard = cardShuffle1;
+// 			thirdCardPosition = position1;
+// 			console.log("third card updated");
+// 		}
+// 		//Run the matching functions.
+// 		checkPair();}
+// 	//Else statement for debugging purposes.
+// 	else {
+// 	console.log("else statement active.");}
+//   }
 
-function clickCard15() {
-	var position15 = document.getElementById("card15");
-	if (click15 === 1){
-		position15.src = cardShuffle15;
-		click15 = 2;
-		if (firstCard === "unclicked"){
-			firstCard = cardShuffle15;
-			firstCardPosition = position15;
-		}
-		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle15;
-			secondCardPosition = position15;
-		}
-		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle15;
-			thirdCardPosition = position15;
-		}
-		checkPair();
-	}
-}
+// function clickCard2() {
+// 	console.log("Card 2 clicked");
+// 	var position2 = document.getElementById("card2");
+// 	if (click2 === 1){
+// 		console.log("Card 2 equals 1");
+// 		position2.src = cardShuffle2;
+// 		click2 = 2;
+// 		if (firstCard === "unclicked"){
+// 			firstCard = cardShuffle2;
+// 			firstCardPosition = position2;}
+// 		else if (secondCard === "unclicked"){
+// 			secondCard = cardShuffle2;
+// 			secondCardPosition = position2;
+// 			}
+// 		else if (thirdCard === "unclicked"){
+// 			thirdCard = cardShuffle2;
+// 			thirdCardPosition = position2;
+// 		}
+// 		checkPair();}
+// }
 
-function clickCard16() {
-	var position16 = document.getElementById("card16");
-	if (click16 === 1){
-		position16.src = cardShuffle16;
-		click16 = 2;
-		if (firstCard === "unclicked"){
-			firstCard = cardShuffle16;
-			firstCardPosition = position16;
-		}
-		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle16;
-			secondCardPosition = position16;
-		}
-		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle16;
-			thirdCardPosition = position16;
-		}
-		checkPair();
-	}
-}
+// function clickCard3() {
+// 	console.log("Card 3 clicked");
+// 	var position3 = document.getElementById("card3");
+// 	if (click3 === 1){
+// 		console.log("Card 3 equals 1");
+// 		position3.src = cardShuffle3;
+// 		click3 = 2;
+// 		if (firstCard === "unclicked"){
+// 			firstCard = cardShuffle3;
+// 			firstCardPosition = position3;}
+// 		else if (secondCard === "unclicked"){
+// 			secondCard = cardShuffle3;
+// 			secondCardPosition = position3;
+// 			}
+// 		else if (thirdCard === "unclicked"){
+// 			thirdCard = cardShuffle3;
+// 			thirdCardPosition = position3;
+// 		}
+// 		checkPair();}
+// }
 
-function clickCard17() {
-	var position17 = document.getElementById("card17");
-	if (click17 === 1){
-		position17.src = cardShuffle17;
-		click17 = 2;
-		if (firstCard === "unclicked"){
-			firstCard = cardShuffle17;
-			firstCardPosition = position17;
-		}
-		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle17;
-			secondCardPosition = position17;
-		}
-		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle17;
-			thirdCardPosition = position17;
-		}
-		checkPair();
-	}
-}
+// function clickCard4() {
+// 	console.log("Card 4 clicked");
+// 	var position4 = document.getElementById("card4");
+// 	if (click4 === 1){
+// 		console.log("Card 4 equals 1");
+// 		position4.src = cardShuffle4;
+// 		click4 = 2;
+// 		if (firstCard === "unclicked"){
+// 			firstCard = cardShuffle4;
+// 			firstCardPosition = position4;}
+// 		else if (secondCard === "unclicked"){
+// 			secondCard = cardShuffle4;
+// 			secondCardPosition = position4;
+// 			}
+// 		else if (thirdCard === "unclicked"){
+// 			thirdCard = cardShuffle4;
+// 			thirdCardPosition = position4;
+// 		}
+// 		checkPair();}
+// }
 
-function clickCard18() {
-	var position18 = document.getElementById("card18");
-	if (click18 === 1){
-		position18.src = cardShuffle18;
-		click18 = 2;
-		if (firstCard === "unclicked"){
-			firstCard = cardShuffle18;
-			firstCardPosition = position18;
-		}
-		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle18;
-			secondCardPosition = position18;
-		}
-		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle18;
-			thirdCardPosition = position18;
-		}
-		checkPair();
-	}
-}
+// function clickCard5() {
+// 	console.log("Card 5 clicked");
+// 	var position5 = document.getElementById("card5");
+// 	if (click5 === 1){
+// 		console.log("Card 5 equals 1");
+// 		position5.src = cardShuffle5;
+// 		click5 = 2;
+// 		if (firstCard === "unclicked"){
+// 			firstCard = cardShuffle5;
+// 			firstCardPosition = position5;
+// 			console.log(firstCardPosition);}
+// 		else if (secondCard === "unclicked"){
+// 			secondCard = cardShuffle5;
+// 			secondCardPosition = position5;
+// 			}
+// 		else if (thirdCard === "unclicked"){
+// 			thirdCard = cardShuffle5;
+// 			thirdCardPosition = position5;
+// 		}
+// 		checkPair();}
+// }
 
-function clickCard19() {
-	var position19 = document.getElementById("card19");
-	if (click19 === 1){
-		position19.src = cardShuffle19;
-		click19 = 2;
-		if (firstCard === "unclicked"){
-			firstCard = cardShuffle19;
-			firstCardPosition = position19;
-		}
-		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle19;
-			secondCardPosition = position19;
-		}
-		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle19;
-			thirdCardPosition = position19;
-		}
-		checkPair();
-	}
-}
+// function clickCard6() {
+// 	console.log("Card 6 clicked");
+// 	var position6 = document.getElementById("card6");
+// 	if (click6 === 1){
+// 		console.log("Card 6 equals 1");
+// 		position6.src = cardShuffle6;
+// 		click6 = 2;
+// 		if (firstCard === "unclicked"){
+// 			firstCard = cardShuffle6;
+// 			firstCardPosition = position6;
+// 			console.log(firstCardPosition);}
+// 		else if (secondCard === "unclicked"){
+// 			secondCard = cardShuffle6;
+// 			secondCardPosition = position6;
+// 			}
+// 		else if (thirdCard === "unclicked"){
+// 			thirdCard = cardShuffle6;
+// 			thirdCardPosition = position6;
+// 		}
+// 		checkPair();}
+// }
 
-function clickCard20() {
-	var position20 = document.getElementById("card20");
-	if (click20 === 1){
-		position20.src = cardShuffle20;
-		click20 = 2;
-		if (firstCard === "unclicked"){
-			firstCard = cardShuffle20;
-			firstCardPosition = position20;
-		}
-		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle20;
-			secondCardPosition = position20;
-		}
-		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle20;
-			thirdCardPosition = position20;
-		}
-		checkPair();
-	}
-}
+// function clickCard7() {
+// 	console.log("Card 7 clicked");
+// 	var position7 = document.getElementById("card7");
+// 	if (click7 === 1){
+// 		console.log("Card 7 equals 1");
+// 		position7.src = cardShuffle7;
+// 		click7 = 2;
+// 		if (firstCard === "unclicked"){
+// 			firstCard = cardShuffle7;
+// 			firstCardPosition = position7;
+// 			console.log(firstCardPosition);}
+// 		else if (secondCard === "unclicked"){
+// 			secondCard = cardShuffle7;
+// 			secondCardPosition = position7;
+// 			}
+// 		else if (thirdCard === "unclicked"){
+// 			thirdCard = cardShuffle7;
+// 			thirdCardPosition = position7;
+// 		}
+// 		checkPair();}
+// }
+
+// function clickCard8() {
+// 	console.log("Card 8 clicked");
+// 	var position8 = document.getElementById("card8");
+// 	if (click8 === 1){
+// 		console.log("Card 8 equals 1");
+// 		position8.src = cardShuffle8;
+// 		click8 = 2;
+// 		if (firstCard === "unclicked"){
+// 			firstCard = cardShuffle8;
+// 			firstCardPosition = position8;
+// 			console.log(firstCardPosition);}
+// 		else if (secondCard === "unclicked"){
+// 			secondCard = cardShuffle8;
+// 			secondCardPosition = position8;
+// 			}
+// 		else if (thirdCard === "unclicked"){
+// 			thirdCard = cardShuffle8;
+// 			thirdCardPosition = position8;
+// 		}
+// 		checkPair();}
+// }
+
+// function clickCard9() {
+// 	console.log("Card 9 clicked");
+// 	var position9 = document.getElementById("card9");
+// 	if (click9 === 1){
+// 		console.log("Card 9 equals 1");
+// 		position9.src = cardShuffle9;
+// 		click9 = 2;
+// 		if (firstCard === "unclicked"){
+// 			firstCard = cardShuffle9;
+// 			firstCardPosition = position9;
+// 			console.log(firstCardPosition);}
+// 		else if (secondCard === "unclicked"){
+// 			secondCard = cardShuffle9;
+// 			secondCardPosition = position9;
+// 			}
+// 		else if (thirdCard === "unclicked"){
+// 			thirdCard = cardShuffle9;
+// 			thirdCardPosition = position9;
+// 		}
+// 		checkPair();}
+// }
+
+// function clickCard10() {
+// 	console.log("Card 10 clicked");
+// 	var position10 = document.getElementById("card10");
+// 	if (click10 === 1){
+// 		console.log("Card 10 equals 1");
+// 		position10.src = cardShuffle10;
+// 		click10 = 2;
+// 		if (firstCard === "unclicked"){
+// 			firstCard = cardShuffle10;
+// 			firstCardPosition = position10;}
+// 		else if (secondCard === "unclicked"){
+// 			secondCard = cardShuffle10;
+// 			secondCardPosition = position10;
+// 			}
+// 		else if (thirdCard === "unclicked"){
+// 			thirdCard = cardShuffle10;
+// 			thirdCardPosition = position10;
+// 		}
+// 		checkPair();}
+// }
+
+// function clickCard11() {
+// 	var position11 = document.getElementById("card11");
+// 	if (click11 === 1){
+// 		position11.src = cardShuffle11;
+// 		click11 = 2;
+// 		if (firstCard === "unclicked"){
+// 			firstCard = cardShuffle11;
+// 			firstCardPosition = position11;
+// 		}
+// 		else if (secondCard === "unclicked"){
+// 			secondCard = cardShuffle11;
+// 			secondCardPosition = position11;
+// 		}
+// 		else if (thirdCard === "unclicked"){
+// 			thirdCard = cardShuffle11;
+// 			thirdCardPosition = position11;
+// 		}
+// 		checkPair();
+// 	}
+// }
+
+// function clickCard12() {
+// 	var position12 = document.getElementById("card12");
+// 	if (click12 === 1){
+// 		position12.src = cardShuffle12;
+// 		click12 = 2;
+// 		if (firstCard === "unclicked"){
+// 			firstCard = cardShuffle12;
+// 			firstCardPosition = position12;
+// 		}
+// 		else if (secondCard === "unclicked"){
+// 			secondCard = cardShuffle12;
+// 			secondCardPosition = position12;
+// 		}
+// 		else if (thirdCard === "unclicked"){
+// 			thirdCard = cardShuffle12;
+// 			thirdCardPosition = position12;
+// 		}
+// 		checkPair();
+// 	}
+// }
+
+// function clickCard13() {
+// 	var position13 = document.getElementById("card13");
+// 	if (click13 === 1){
+// 		position13.src = cardShuffle13;
+// 		click13 = 2;
+// 		if (firstCard === "unclicked"){
+// 			firstCard = cardShuffle13;
+// 			firstCardPosition = position13;
+// 		}
+// 		else if (secondCard === "unclicked"){
+// 			secondCard = cardShuffle13;
+// 			secondCardPosition = position13;
+// 		}
+// 		else if (thirdCard === "unclicked"){
+// 			thirdCard = cardShuffle13;
+// 			thirdCardPosition = position13;
+// 		}
+// 		checkPair();
+// 	}
+// }
+
+// function clickCard14() {
+// 	var position14 = document.getElementById("card14");
+// 	if (click14 === 1){
+// 		position14.src = cardShuffle14;
+// 		click14 = 2;
+// 		if (firstCard === "unclicked"){
+// 			firstCard = cardShuffle14;
+// 			firstCardPosition = position14;
+// 		}
+// 		else if (secondCard === "unclicked"){
+// 			secondCard = cardShuffle14;
+// 			secondCardPosition = position14;
+// 		}
+// 		else if (thirdCard === "unclicked"){
+// 			thirdCard = cardShuffle14;
+// 			thirdCardPosition = position14;
+// 		}
+// 		checkPair();
+// 	}
+// }
+
+// function clickCard15() {
+// 	var position15 = document.getElementById("card15");
+// 	if (click15 === 1){
+// 		position15.src = cardShuffle15;
+// 		click15 = 2;
+// 		if (firstCard === "unclicked"){
+// 			firstCard = cardShuffle15;
+// 			firstCardPosition = position15;
+// 		}
+// 		else if (secondCard === "unclicked"){
+// 			secondCard = cardShuffle15;
+// 			secondCardPosition = position15;
+// 		}
+// 		else if (thirdCard === "unclicked"){
+// 			thirdCard = cardShuffle15;
+// 			thirdCardPosition = position15;
+// 		}
+// 		checkPair();
+// 	}
+// }
+
+// function clickCard16() {
+// 	var position16 = document.getElementById("card16");
+// 	if (click16 === 1){
+// 		position16.src = cardShuffle16;
+// 		click16 = 2;
+// 		if (firstCard === "unclicked"){
+// 			firstCard = cardShuffle16;
+// 			firstCardPosition = position16;
+// 		}
+// 		else if (secondCard === "unclicked"){
+// 			secondCard = cardShuffle16;
+// 			secondCardPosition = position16;
+// 		}
+// 		else if (thirdCard === "unclicked"){
+// 			thirdCard = cardShuffle16;
+// 			thirdCardPosition = position16;
+// 		}
+// 		checkPair();
+// 	}
+// }
+
+// function clickCard17() {
+// 	var position17 = document.getElementById("card17");
+// 	if (click17 === 1){
+// 		position17.src = cardShuffle17;
+// 		click17 = 2;
+// 		if (firstCard === "unclicked"){
+// 			firstCard = cardShuffle17;
+// 			firstCardPosition = position17;
+// 		}
+// 		else if (secondCard === "unclicked"){
+// 			secondCard = cardShuffle17;
+// 			secondCardPosition = position17;
+// 		}
+// 		else if (thirdCard === "unclicked"){
+// 			thirdCard = cardShuffle17;
+// 			thirdCardPosition = position17;
+// 		}
+// 		checkPair();
+// 	}
+// }
+
+// function clickCard18() {
+// 	var position18 = document.getElementById("card18");
+// 	if (click18 === 1){
+// 		position18.src = cardShuffle18;
+// 		click18 = 2;
+// 		if (firstCard === "unclicked"){
+// 			firstCard = cardShuffle18;
+// 			firstCardPosition = position18;
+// 		}
+// 		else if (secondCard === "unclicked"){
+// 			secondCard = cardShuffle18;
+// 			secondCardPosition = position18;
+// 		}
+// 		else if (thirdCard === "unclicked"){
+// 			thirdCard = cardShuffle18;
+// 			thirdCardPosition = position18;
+// 		}
+// 		checkPair();
+// 	}
+// }
+
+// function clickCard19() {
+// 	var position19 = document.getElementById("card19");
+// 	if (click19 === 1){
+// 		position19.src = cardShuffle19;
+// 		click19 = 2;
+// 		if (firstCard === "unclicked"){
+// 			firstCard = cardShuffle19;
+// 			firstCardPosition = position19;
+// 		}
+// 		else if (secondCard === "unclicked"){
+// 			secondCard = cardShuffle19;
+// 			secondCardPosition = position19;
+// 		}
+// 		else if (thirdCard === "unclicked"){
+// 			thirdCard = cardShuffle19;
+// 			thirdCardPosition = position19;
+// 		}
+// 		checkPair();
+// 	}
+// }
+
+// function clickCard20() {
+// 	var position20 = document.getElementById("card20");
+// 	if (click20 === 1){
+// 		position20.src = cardShuffle20;
+// 		click20 = 2;
+// 		if (firstCard === "unclicked"){
+// 			firstCard = cardShuffle20;
+// 			firstCardPosition = position20;
+// 		}
+// 		else if (secondCard === "unclicked"){
+// 			secondCard = cardShuffle20;
+// 			secondCardPosition = position20;
+// 		}
+// 		else if (thirdCard === "unclicked"){
+// 			thirdCard = cardShuffle20;
+// 			thirdCardPosition = position20;
+// 		}
+// 		checkPair();
+// 	}
+// }
